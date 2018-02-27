@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Macondo');
+body {
+  text-align: center;
+  background-color: #34495e;
+  color: #ecf0f1;
+}
+
+h1 {
+  font-family: Monoton;
+  font-size: 70px;
+  margin: 0.2em;
+}
+
+h2 {
+  font-family: "Macondo", "Ariel";
+  margin: 1em 0 0.25em;
+  color: #f1c40f;
+}
+
+h2:first-of-type {
+  margin-top: 0.5em;
+  color: #f1c40f;
+}
+
+table,
+tr,
+td {
+  border: 1px solid #f1c40f;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+tr {
+  height: 20px;
+}
+
+td {
+  width: 20px;
+}
+/*inputs numbers and submit*/
+input[type="number"] {
+  width: 6em;
+  border-radius: 5px;
+}
+input[type="submit"] {
+  width: 85px;
+  border-radius: 5px;
+  color: #2c3e50;
+  background-color: #f1c40f;
+  font-size: 1em;
+  font-weight: bold;
+}
+/*Hover input*/
+#remove input:hover, #sizePicker input:nth-child(3):hover {
+  border: 2px solid #2c3e50;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+}
+input[type="color"] {
+  border-radius: 5px;
+  width: 85px;
+}
+input {
+  font-family: "Macondo", "Ariel";
+  color: #34495e;
+  padding: 0.5% 0.3%;
+}
+/*Media query*/
+@media screen and (max-width: 470px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  form input {
+    margin: 1%;
+  }
+  #remove input {
+    flex-direction: column;
+  }
+}
+h2:last-of-type {
+  color: #fff;
+  border: 1px solid #f1c40f;
+  width: 30%;
+  padding: 1% 0;
+  text-align: center;
+  margin: 2% 35%;
+  border-radius: 20px 5px;
+  background-color: #f1c40f;
+  color: #2c3e50;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#remove {
+  margin: 1% 20%;
+  width: 60%;
+}
+#remove input {
+  width: 130px;
+  margin: 1% 3%;
+}

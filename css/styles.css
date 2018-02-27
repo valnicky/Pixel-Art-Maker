@@ -1,14 +1,45 @@
-@import url('https://fonts.googleapis.com/css?family=Macondo');
+@import url("https://fonts.googleapis.com/css?family=Macondo");
 body {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
   text-align: center;
   background-color: #34495e;
   color: #ecf0f1;
 }
+#row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
 
+#chooseGrid {
+  border: 7px solid #f1c40f;
+  background-color: #34495e;
+  border-radius: 20px 15px;
+  margin: 0 1%;
+}
+
+#sizePicker {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+#pixel_canvas {
+  border: 7px dashed #f1c40f;
+  background-color: #fff;
+  cursor:pointer;
+}
 h1 {
-  font-family: Monoton;
+  text-align: center;
+  font-family: "Monoton", "Arial";
   font-size: 70px;
-  margin: 0.2em;
+  margin: 0 auto;
+  color: #fff;
+}
+h1 span {
+  color: #f1c40f;
 }
 
 h2 {
@@ -42,19 +73,24 @@ td {
 }
 /*inputs numbers and submit*/
 input[type="number"] {
-  width: 6em;
+  width: 7em;
   border-radius: 5px;
+  margin: 2%;
 }
 input[type="submit"] {
-  width: 85px;
+  width: 130px;
+  margin: 4%;
   border-radius: 5px;
   color: #2c3e50;
   background-color: #f1c40f;
   font-size: 1em;
   font-weight: bold;
+  cursor: pointer;
 }
 /*Hover input*/
-#remove input:hover, #sizePicker input:nth-child(3):hover {
+#remove input:hover,
+#sizePicker input:nth-child(3):hover,
+#randomColors:hover {
   border: 2px solid #2c3e50;
   -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
@@ -62,12 +98,27 @@ input[type="submit"] {
 }
 input[type="color"] {
   border-radius: 5px;
-  width: 85px;
+  width: 130px;
 }
 input {
   font-family: "Macondo", "Ariel";
   color: #34495e;
   padding: 0.5% 0.3%;
+}
+
+#maximumValueAlert {
+  width: 150px;
+  margin: 3%;
+  padding: 2%;
+  border-radius: 10px;
+  color: #2c3e50;
+  background-color: #f1c40f;
+  font-size: 1em;
+  font-weight: bold;
+  position: absolute;
+  border: 1px solid #fff;
+  display: table;
+  visibility: hidden;
 }
 /*Media query*/
 @media screen and (max-width: 470px) {
@@ -83,14 +134,32 @@ input {
   #remove input {
     flex-direction: column;
   }
+  #row {
+    justify-content: center;
+    flex-direction: column;
+  }
+  #chooseGrid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #colorPicker {
+    margin: 0 auto;
+  }
+}
+
+.design {
+  display: flex;
+  align-item: center;
+  justify-content: center;
 }
 h2:last-of-type {
-  color: #fff;
+  display: flex;
+  align-item: center;
+  justify-content: center;
   border: 1px solid #f1c40f;
-  width: 30%;
-  padding: 1% 0;
+  padding: 0;
   text-align: center;
-  margin: 2% 35%;
   border-radius: 20px 5px;
   background-color: #f1c40f;
   color: #2c3e50;
@@ -99,11 +168,7 @@ h2:last-of-type {
   box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-#remove {
-  margin: 1% 20%;
-  width: 60%;
-}
 #remove input {
   width: 130px;
-  margin: 1% 3%;
+  margin: 2% 3%;
 }
